@@ -1,6 +1,6 @@
 # esercitazione3
 
-##italiano
+## italiano
 
 ## Utilizzo di diverse normalizzazioni per il filtro gaussiano
 
@@ -44,7 +44,7 @@ Le funzioni di supporto per questa implementazione possono essere trovate in `ed
 
 Utilizzare la soglia alta per iniziare le curve di bordo e la soglia bassa per continuarle
 
-##Inglese
+## Inglese
 
 ## Using different Normalisations for Gaussian filter
 
