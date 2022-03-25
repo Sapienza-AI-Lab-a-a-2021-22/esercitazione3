@@ -184,6 +184,7 @@ struct Image
   
   // member functions for modifying image
   void l1_normalize(void);
+  void l2_normalize(void);
   void RGBtoHSV(void);
   void HSVtoRGB(void);
   void LCHtoRGB(void);

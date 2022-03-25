@@ -17,8 +17,7 @@ add_library(uwimg++ SHARED
             src/resize_image.cpp
             src/filter_image.cpp
 
-            src/edge_detection.cpp
-        )
+        src/edge_detection.cpp)
 
 link_libraries(uwimg++ m stdc++)
 
