@@ -163,7 +163,7 @@ Image performEdgeLink(Image imgFile_img1)
     NOT_IMPLEMENTED();
 
 
-    return imgFile_out;
+    return imgFile_img1;
 
 }
 
