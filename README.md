@@ -1,6 +1,6 @@
 # esercitazione3
 
-## italiano
+## Italiano
 
 ## Utilizzo di diverse normalizzazioni per il filtro gaussiano
 
