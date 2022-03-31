@@ -257,9 +257,14 @@ void feature_normalize_total(Image& im);
 void threshold_image(Image& im, float thresh);
 pair<Image,Image> sobel_image(const Image&  im);
 Image colorize_sobel(const Image&  im);
-Image smooth_image(const Image&  im, float sigma);
 Image bilateral_filter(const Image& im, float sigma, float sigma2);
 
+// Edging
+Image smooth_image(const Image& im, float sigma);
+pair<Image,Image> compute_gradient(const Image& im, float sigma);
+Image non_maximum_supp(const Image& G, const Image& theta);
+Image double_thresholding(const Image& im, float lowThreshold, float highThreshold, float strong, float weak);
+Image edge_tracking(const Image& im, float weak, float strong);
 
 
 // Image manipulation

@@ -1,0 +1,4 @@
+/home/sara/Scrivania/esercitazione3/build/CMakeFiles/rebuild_cache.dir
+/home/sara/Scrivania/esercitazione3/build/CMakeFiles/edit_cache.dir
+/home/sara/Scrivania/esercitazione3/build/CMakeFiles/test2.dir
+/home/sara/Scrivania/esercitazione3/build/CMakeFiles/uwimg++.dir
