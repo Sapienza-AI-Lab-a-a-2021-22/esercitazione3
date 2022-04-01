@@ -1,4 +1,7 @@
 # Esercitazione 3
+Per lo sviluppo di questa esercitazione sono adattati i seguenti riferimenti:
+- [Canny Edge Detection - Step by step in Python](https://towardsdatascience.com/canny-edge-detection-step-by-step-in-python-computer-vision-b49c3a2d8123)
+- [Homework 2 for the course cs131 (in Python)](https://github.com/xuwd11/cs131_hws/blob/master/hw2/hw2.ipynb)
 
 ## 1. Normalizzazione L2 per il filtro gaussiano
 
@@ -30,7 +33,7 @@ Dopo aver eseguito tutti i passi, dovreste essere in grado di ottenere il seguen
 
 Immagine Originale                 |  Immagine Finale
 :-----------------:|:------------------:
-![](data/lena.jpg)   |  ![](data/edge_lena.png)
+![](data/iguana.jpg)   |  ![](data/edge_iguana.png)
 
 Un'ultima cosa importante da menzionare è che l'algoritmo si basa su immagini in scala di grigi. 
 Pertanto, il prerequisito è convertire l'immagine in scala di grigi prima di seguire i passaggi sopra menzionati.
@@ -50,7 +53,7 @@ Dopo aver applicato la sfocatura gaussiana, dovreste ottenere il seguente risult
 
 Immagine Originale                 |  Immagine Sfocata
 :-----------------:|:------------------:
-![](data/grey_lena.png)   |  ![](data/smooth_lena.png)
+![](data/iguana_grey.png)   |  ![](data/smooth_iguana.png)
 
 
 ### 2.2 Calcolo del gradiente
@@ -70,7 +73,7 @@ soppressione non massima ci aiuterà a mitigare quelli spessi.
 
 Immagine Sfocata                 |  Intensità del Gradiente 
 :-----------------:|:------------------:
-![](data/smooth_lena.png)   |  ![](data/gx_lena.png)
+![](data/smooth_iguana.png)   |  ![](data/gx_iguana.png)
 
 
 ### 2.3 Non-maximum suppression
@@ -112,7 +115,7 @@ e cercheremo di colmare questa mancanza con i due passaggi finali.
 
 Intensità del Gradiente                 |  Non-Max Suppression
 :-----------------:|:------------------:
-![](data/gx_lena.png)   |  ![](data/non_max_supp_lena.png)
+![](data/gx_iguana.png)   |  ![](data/non_max_supp_iguana.png)
 
 
 ### 2.4 Doppia soglia
@@ -131,7 +134,7 @@ Il risultato di questo passaggio è un'immagine con valori di intensità di soli
 
 Non-Max Suppression                 |  Doppia soglia
 :-----------------:|:------------------:
-![](data/non_max_supp_lena.png)   |  ![](data/doub_thres_lena.png)
+![](data/non_max_supp_iguana.png)   |  ![](data/doub_thres_iguana.png)
 
 ### 2.5 Tracciamento dei bordi per isteresi
 
@@ -144,7 +147,7 @@ Il risultato finale dovrebbe essere:
 
 Doppia Soglia                 |  Isteresi
 :-----------------:|:------------------:
-![](data/doub_thres_lena.png)   |  ![](data/edge_lena.png)
+![](data/doub_thres_iguana.png)   |  ![](data/edge_iguana.png)
 
 
 

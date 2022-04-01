@@ -8,10 +8,12 @@ using namespace std;
 
 void test_smooth_image() {
 
-    Image im = load_image("data/lena.jpg");
+    Image im = load_image("data/iguana.jpg");
     Image smooth = smooth_image(im, 1.4);
-    smooth.save_png("output/smooth_lena");
-    Image check_gt = load_image("data/smooth_lena.png");
+    smooth.save_png("output/smooth_iguana");
+    Image new_im = rgb_to_grayscale(im);
+    new_im.save_png("output/iguana_gray");
+    Image check_gt = load_image("data/smooth_iguana.png");
     TEST(same_image(smooth, check_gt));
 
 }
@@ -19,13 +21,13 @@ void test_smooth_image() {
 
 void test_gradient() {
 
-    Image im = load_image("data/lena.jpg");
+    Image im = load_image("data/iguana.jpg");
     pair<Image,Image> grad = compute_gradient(im, 1.4);
     Image mag = grad.first;
     Image dir = grad.second;
-    mag.save_png("output/dx_lena");
-    dir.save_png("output/dy_lena");
-    Image check_gtx = load_image("data/gx_lena.png");
+    mag.save_png("output/dx_iguana");
+    dir.save_png("output/dy_iguana");
+    Image check_gtx = load_image("data/gx_iguana.png");
     TEST(same_image(mag, check_gtx));
 
 }
@@ -33,33 +35,33 @@ void test_gradient() {
 
 void test_non_max_supp() {
 
-    Image im = load_image("data/lena.jpg");
+    Image im = load_image("data/iguana.jpg");
     pair<Image,Image> grad = compute_gradient(im, 1.4);
     Image mag = grad.first;
     Image dir = grad.second;
     Image nms = non_maximum_supp(mag, dir);
-    nms.save_png("output/nms_lena");
-    Image check_nms = load_image("data/non_max_supp_lena.png");
+    nms.save_png("output/nms_iguana");
+    Image check_nms = load_image("data/non_max_supp_iguana.png");
     TEST(same_image(check_nms, nms));
 
 }
 
 
 void test_double_thresholding() {
-    Image im = load_image("data/lena.jpg");
+    Image im = load_image("data/iguana.jpg");
     pair<Image,Image> grad = compute_gradient(im, 1.4);
     Image mag = grad.first;
     Image dir = grad.second;
     Image nms = non_maximum_supp(mag, dir);
     Image dt = double_thresholding(nms, 0.03, 0.17, 1.0, 0.2);
-    dt.save_png("output/double_threshold_lena");
-    Image dt_check = load_image("data/doub_thres_lena.png");
+    dt.save_png("output/double_threshold_iguana");
+    Image dt_check = load_image("data/doub_thres_iguana.png");
     TEST(same_image(dt, dt_check));
 
 }
 
 void test_edge_tracking() {
-    Image im = load_image("data/lena.jpg");
+    Image im = load_image("data/iguana.jpg");
     pair<Image,Image> grad = compute_gradient(im, 1.4);
     Image mag = grad.first;
     Image dir = grad.second;
@@ -68,8 +70,8 @@ void test_edge_tracking() {
     float weak = 0.2;
     Image dt = double_thresholding(nms, 0.03, 0.17, strong, weak);
     Image edge_track = edge_tracking(dt, weak, strong);
-    edge_track.save_png("output/edge_track_lena");
-    Image et_check = load_image("data/edge_lena.png");
+    edge_track.save_png("output/edge_track_iguana");
+    Image et_check = load_image("data/edge_iguana.png");
     TEST(same_image(edge_track, et_check));
 }
 
