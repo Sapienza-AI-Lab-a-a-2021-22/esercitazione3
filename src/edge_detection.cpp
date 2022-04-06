@@ -12,10 +12,11 @@ Image smooth_image(const Image& im, float sigma)
 {
 
     //TODO: Implement the smoothing
-    NOT_IMPLEMENTED();
+    Image filter = make_gaussian_filter(sigma);
+    Image new_im = rgb_to_grayscale(im);
+    new_im = convolve_image(new_im, filter, false);
 
-
-    return im;
+    return new_im;
 }
 
 

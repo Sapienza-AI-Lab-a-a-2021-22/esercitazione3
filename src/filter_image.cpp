@@ -31,13 +31,26 @@ void l1_normalize(Image& im)
     return;
 }
 
+// FIXME: Creare il test per questa funzione
 void l2_normalize(Image& im)
 {
 
-    // TODO: Normalize each channel
+    for (int c = 0; c < im.c; c ++) {
+        double normalizer = 0.0;
+        for (int y = 0; y < im.h; y ++) {
+            for (int x = 0; x < im.w; x ++) {
+                normalizer += pow(im(x, y, c), 2);
+            }
+        }
 
-    //implement your code()
+        normalizer = sqrt(normalizer);
 
+        for (int y = 0; y < im.h; y ++) {
+            for (int x = 0; x < im.w; x ++) {
+                im(x,y,c) = (float) im(x,y,c) / normalizer;
+            }
+        }
+    }
     return;
 }
 
@@ -189,10 +202,10 @@ Image make_emboss_filter()
 // HW1 #2.4
 // float sigma: sigma for the gaussian filter
 // returns basic gaussian filter
+// FIXME: il coefficiente c non serve perché c'è la normalizzazione.
+// FIXME: la normalizzazione L2 non funziona
 Image make_gaussian_filter(float sigma)
 {
-    // TODO: Implement the filter
-
     int w = ceil (sigma * 6);
     if (!(w % 2))
         w ++;
@@ -206,7 +219,7 @@ Image make_gaussian_filter(float sigma)
             int ry = y - (w/2);
 
             float var = powf(sigma, 2);
-            float c = 2 * M_PI * var;
+            float c = 1; //2 * M_PI * var;
             float p = -(powf(rx,2) + powf(ry,2)) / (2 * var);
             float e = expf(p);
             float val = e / c;
@@ -214,7 +227,7 @@ Image make_gaussian_filter(float sigma)
         }
     }
 
-    l2_normalize(f);
+    l1_normalize(f);
 
     return f;
 }
