@@ -63,19 +63,19 @@ Image non_maximum_supp(const Image& G, const Image& theta)
 
             // angle 0
             if (((0 <= angle(x,y,0) && angle(x,y,0)) < 22.5) || (157.5 <= angle(x,y,0) && angle(x,y,0) <= 180)) {
-                q = G(x, y + 1, 0);
-                r = G(x, y - 1, 0);
+                q = G(x+1, y, 0);
+                r = G(x-1, y, 0);
             }
 
             // angle 45
             if ((22.5 <= angle(x,y,0) && angle(x,y,0) < 67.5)) {
-                q = G(x + 1, y - 1, 0);
-                r = G(x - 1, y + 1, 0);
+                q = G(x - 1, y + 1, 0);
+                r = G(x + 1, y - 1, 0);
             }
             // angle 90
             else if ((67.5 <= angle(x,y,0) &&  angle(x,y,0) < 112.5)){
-                q = G(x + 1, y, 0);
-                r = G(x - 1, y, 0);
+                q = G(x, y+1, 0);
+                r = G(x, y-1, 0);
             }
 
             // angle 135

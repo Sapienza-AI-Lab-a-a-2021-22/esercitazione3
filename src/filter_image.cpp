@@ -214,7 +214,6 @@ Image make_gaussian_filter(float sigma)
         }
     }
 
-    l2_normalize(f);
 
     return f;
 }
