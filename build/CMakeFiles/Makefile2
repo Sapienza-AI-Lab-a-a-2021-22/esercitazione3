@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sara/Scrivania/esercitazione3
+CMAKE_SOURCE_DIR = /home/sara/Desktop/esercitazione3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sara/Scrivania/esercitazione3/build
+CMAKE_BINARY_DIR = /home/sara/Desktop/esercitazione3/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -76,14 +76,14 @@ clean: CMakeFiles/uwimg++.dir/clean
 CMakeFiles/test2.dir/all: CMakeFiles/uwimg++.dir/all
 	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/depend
 	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sara/Scrivania/esercitazione3/build/CMakeFiles --progress-num=1,2 "Built target test2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sara/Desktop/esercitazione3/build/CMakeFiles --progress-num=1,2 "Built target test2"
 .PHONY : CMakeFiles/test2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sara/Scrivania/esercitazione3/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sara/Desktop/esercitazione3/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sara/Scrivania/esercitazione3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sara/Desktop/esercitazione3/build/CMakeFiles 0
 .PHONY : CMakeFiles/test2.dir/rule
 
 # Convenience name for target.
@@ -103,14 +103,14 @@ CMakeFiles/test2.dir/clean:
 CMakeFiles/uwimg++.dir/all:
 	$(MAKE) -f CMakeFiles/uwimg++.dir/build.make CMakeFiles/uwimg++.dir/depend
 	$(MAKE) -f CMakeFiles/uwimg++.dir/build.make CMakeFiles/uwimg++.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sara/Scrivania/esercitazione3/build/CMakeFiles --progress-num=3,4,5,6,7,8,9 "Built target uwimg++"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sara/Desktop/esercitazione3/build/CMakeFiles --progress-num=3,4,5,6,7,8,9 "Built target uwimg++"
 .PHONY : CMakeFiles/uwimg++.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uwimg++.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sara/Scrivania/esercitazione3/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sara/Desktop/esercitazione3/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/uwimg++.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sara/Scrivania/esercitazione3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sara/Desktop/esercitazione3/build/CMakeFiles 0
 .PHONY : CMakeFiles/uwimg++.dir/rule
 
 # Convenience name for target.

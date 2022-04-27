@@ -149,9 +149,9 @@ Image edge_tracking(const Image& im, float weak, float strong)
     for (int y = 1; y < im.h-1; y ++) {
         for (int x = 1; x < im.w - 1; x++) {
             if(im(x,y,0) == weak){
-                if((im(x+1,y-1,0) == strong) or (im(x+1,y,0) == strong) or (im(x+1,y+1,0) == strong) or
-                        (im(x,y-1,0) == strong) or (im(x,y+1,0) == strong) or (im(x-1,y-1,0) == strong) or
-                        (im(x-1,y,0) == strong) or (im(x-1,y+1,0) == strong))
+                if((im(x-1,y+1,0) == strong) or (im(x,y+1,0) == strong) or (im(x+1,y+1,0) == strong) or
+                        (im(x-1,y,0) == strong) or (im(x+1,y,0) == strong) or (im(x-1,y-1,0) == strong) or
+                        (im(x,y-1,0) == strong) or (im(x+1,y-1,0) == strong))
                     res(x,y,0) = 1;
                 else
                     res(x,y,0) = 0;

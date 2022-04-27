@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -fdiagnostics-color=always -std=c++11 -pthread -g -march=native -fPIC  -rdynamic CMakeFiles/test2.dir/src/test/test2.cpp.o  -o ../test2  -Wl,-rpath,/home/sara/Scrivania/esercitazione3/build libuwimg++.so -lm -lstdc++ 
+/usr/bin/c++  -Wall -fdiagnostics-color=always -std=c++11 -pthread -g -march=native -fPIC  -rdynamic CMakeFiles/test2.dir/src/test/test2.cpp.o  -o ../test2  -Wl,-rpath,/home/sara/Desktop/esercitazione3/build libuwimg++.so -lm -lstdc++ 

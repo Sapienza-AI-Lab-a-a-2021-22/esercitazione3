@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sara/Scrivania/esercitazione3/src/edge_detection.cpp" "/home/sara/Scrivania/esercitazione3/build/CMakeFiles/uwimg++.dir/src/edge_detection.cpp.o"
-  "/home/sara/Scrivania/esercitazione3/src/filter_image.cpp" "/home/sara/Scrivania/esercitazione3/build/CMakeFiles/uwimg++.dir/src/filter_image.cpp.o"
-  "/home/sara/Scrivania/esercitazione3/src/load_image.cpp" "/home/sara/Scrivania/esercitazione3/build/CMakeFiles/uwimg++.dir/src/load_image.cpp.o"
-  "/home/sara/Scrivania/esercitazione3/src/process_image.cpp" "/home/sara/Scrivania/esercitazione3/build/CMakeFiles/uwimg++.dir/src/process_image.cpp.o"
-  "/home/sara/Scrivania/esercitazione3/src/resize_image.cpp" "/home/sara/Scrivania/esercitazione3/build/CMakeFiles/uwimg++.dir/src/resize_image.cpp.o"
-  "/home/sara/Scrivania/esercitazione3/src/utils.cpp" "/home/sara/Scrivania/esercitazione3/build/CMakeFiles/uwimg++.dir/src/utils.cpp.o"
+  "/home/sara/Desktop/esercitazione3/src/edge_detection.cpp" "/home/sara/Desktop/esercitazione3/build/CMakeFiles/uwimg++.dir/src/edge_detection.cpp.o"
+  "/home/sara/Desktop/esercitazione3/src/filter_image.cpp" "/home/sara/Desktop/esercitazione3/build/CMakeFiles/uwimg++.dir/src/filter_image.cpp.o"
+  "/home/sara/Desktop/esercitazione3/src/load_image.cpp" "/home/sara/Desktop/esercitazione3/build/CMakeFiles/uwimg++.dir/src/load_image.cpp.o"
+  "/home/sara/Desktop/esercitazione3/src/process_image.cpp" "/home/sara/Desktop/esercitazione3/build/CMakeFiles/uwimg++.dir/src/process_image.cpp.o"
+  "/home/sara/Desktop/esercitazione3/src/resize_image.cpp" "/home/sara/Desktop/esercitazione3/build/CMakeFiles/uwimg++.dir/src/resize_image.cpp.o"
+  "/home/sara/Desktop/esercitazione3/src/utils.cpp" "/home/sara/Desktop/esercitazione3/build/CMakeFiles/uwimg++.dir/src/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

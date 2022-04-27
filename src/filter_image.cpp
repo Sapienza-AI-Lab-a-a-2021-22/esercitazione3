@@ -36,9 +36,22 @@ void l2_normalize(Image& im)
 
     // TODO: Normalize each channel
 
-    //implement your code()
+    for (int c = 0; c < im.c; c ++) {
+        float sum = 0.0;
+        for (int y = 0; y < im.h; y ++) {
+            for (int x = 0; x < im.w; x ++) {
+                sum += (pow(x,2) + pow(x,2));
+            }
+        }
 
+        for (int y = 0; y < im.h; y ++) {
+            for (int x = 0; x < im.w; x ++) {
+                im(x,y,c) = (float) im(x,y,c) / sqrt(sum);
+            }
+        }
+    }
     return;
+
 }
 
 // HW1 #2.1
